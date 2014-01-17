@@ -3,7 +3,21 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>Spring-SimpleLoginApp</display-name>
+  
+  <!-- Context root -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>
+  		WEB-INF/applicationContext.xml
+  		WEB-INF/dataAccessContext.xml
+  	</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- Context root end -->
+  
   
   <!-- Servlet -->
   <servlet>

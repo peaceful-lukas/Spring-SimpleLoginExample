@@ -10,17 +10,10 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-	
-	<context:annotation-config/>	
-		
-	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
-		<property name="order" value="1" />
-	</bean>
-	
-	
-	<bean name="/" class="com.hellowd.sandbox.controller.HomeController"></bean>
-	
+
+	<context:annotation-config/>  
+    
+    <!-- Service -->
+    <bean id="userService" class="com.hellowd.sandbox.service.impl.UserServiceImpl" factory-method="getInstance" />
+    
 </beans>
